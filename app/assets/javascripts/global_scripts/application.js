@@ -14,9 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require ace/ace
-//= require ace/worker-html
-//= require ace/worker-js
-//= require ace/worker-css
 //= require ace/mode-javascript
 //= require ace/mode-html
 //= require ace/mode-css
