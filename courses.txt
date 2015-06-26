@@ -1,0 +1,9 @@
+INSERT INTO courses (name, challenges, created_at, updated_at) VALUES
+('Smiley', , NOW(), NOW());
+
+
+'<iframe src="https://player.vimeo.com/video/131790969" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>,<iframe src="https://player.vimeo.com/video/131790968" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>,<iframe src="https://player.vimeo.com/video/131790966" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>,<iframe src="https://player.vimeo.com/video/131790967" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>,
+<iframe src="https://player.vimeo.com/video/131790965" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>,<iframe src="https://player.vimeo.com/video/131791029" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>,
+<iframe src="https://player.vimeo.com/video/131791026" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>,<iframe src="https://player.vimeo.com/video/131791025" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
+
+
