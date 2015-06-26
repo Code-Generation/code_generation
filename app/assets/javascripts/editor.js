@@ -1,6 +1,5 @@
 $(document).ready(function() {
     ace.config.set("workerPath", "/public_js/ace/workers")
-});
 
 window.addEventListener("keydown", function(e) {
     // arrow keys
@@ -224,7 +223,6 @@ function submitForm(){
 var alert_messages_block = document.getElementById('alert_messages_block');
 alert_messages_block.innerHTML = "";
 
-$(document).ready(function(){
   if(projectsInfo.project_name) {
     $('#project_name').val(projectsInfo.project_name);
   }
