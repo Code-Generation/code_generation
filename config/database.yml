@@ -88,7 +88,7 @@ test:
 production:
   <<: *default
   host: localhost
-  adapter: postgres
+  adapter: postgresql
   encoding: utf8
   database: codegeneration_production
   username: codegen_admin
