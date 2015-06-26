@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-3">
+    <h1><%= @current_user.username %></h1>
+    <a class="btn btn-info" href="/editor/index">New Project</a>
+  </div>
+  <div class="col-md-9">
+    <h2>Projects</h2>
+    <% @projects.each do |p| %>
+      <div class="bs-component">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= p.name %></h3>
+          </div>
+          <div class="panel-body">
+            <p><%= p.description %></p>
+            <a class="btn-sm btn-default" href="/p/<%= p.id %>">Go to Project</a>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>

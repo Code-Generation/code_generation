@@ -1,0 +1,72 @@
+h5 {
+  color: white;
+}
+#editors {
+  height: 250px;
+}
+
+#html_editor, #css_editor, #js_editor {
+  width: 100%;
+  display: inline-block;
+}
+
+#browser, #terminal {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  padding: 20px;
+}
+
+#browser {
+  position: relative;
+  background-color: white;
+  color: black;
+  height: 340px;
+}
+
+#terminal {
+  background-color: black;
+  opacity: 0.7;
+  overflow: scroll;
+  font-family: monospace;
+}
+
+#terminal p {
+  color: lime;
+}
+
+#terminal p.error {
+  color: red;
+}
+
+img {
+  z-index: 99;
+}
+
+#challenges_list{
+}
+  #challenges_list .challenge_item{
+    font-size: 14px;
+  }
+  #challenges_list .btn-success{
+    border: none !important;
+    background: #FFC040 !important;
+    text-shadow: #FF8F00 0px 2px 0px;
+    font-weight: bold;
+    -webkit-box-shadow: 0 3px 0px #FF8F00;
+    box-shadow: 0 3px 0px #FF8F00;
+  }
+  #challenges_list .btn-success:active{
+    border: none !important;
+  }
+.project_link{
+  color: #FFC040 !important;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}  
+.project_link:hover{
+  color: #FFC040 !important;
+  text-decoration: underline !important;
+}  

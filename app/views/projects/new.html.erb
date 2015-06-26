@@ -1,0 +1,17 @@
+<h1>New Project</h1>
+<form action="/projects" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <p>
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text">
+  </p>
+  <p>
+    <label for="description">Description</label>
+    <input id="description" name="description" type="text">
+  </p>
+  <p>
+    <label for="code">Code</label>
+    <textarea id="code" name="code"></textarea>
+  </p>
+  <input type="submit" value="Deploy">
+</form>

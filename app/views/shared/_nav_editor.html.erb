@@ -1,0 +1,47 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class='container'>
+    <div class='navbar-header'>
+      <a href="/users/<%= @current_user.id %>" class='navbar-brand'>Code Generation</a>
+      <button class='navbar-toggle' type='button' data-toggle='collapse' data-target='#navbar-main'>
+        <span class='icon-bar'></span>
+        <span class='icon-bar'></span>
+        <span class='icon-bar'></span>
+      </button>
+    </div>
+    <div class='navbar-collapse collapse' id='navbar-main'>
+      <ul class='nav navbar-nav navbar-right' id="challenges_list">
+        <li class="challenge_item">
+          <a href="#"
+            data-toggle="modal" data-target="#challenge_1">Challenge 1</a>
+        </li>
+        <li class="challenge_item">
+          <a href="#"
+            data-toggle="modal" data-target="#challenge_2">Challenge 2</a>
+        </li>
+        <li class="challenge_item">
+          <a href="#"
+            data-toggle="modal" data-target="#challenge_3">Challenge 3</a>
+        </li>
+        <li class="challenge_item">
+          <a href="#"
+            data-toggle="modal" data-target="#challenge_4">Challenge 4</a>
+        </li>
+        <li class="challenge_item">
+          <a href="#"
+            data-toggle="modal" data-target="#challenge_5">Challenge 5</a>
+        </li>
+        <li class="challenge_item">
+          <a href="#"
+            data-toggle="modal" data-target="#challenge_6">Challenge 6</a>
+        </li>
+        <li class="challenge_item">
+          <a href="#"
+            data-toggle="modal" data-target="#challenge_7">Challenge 7</a>
+        </li>
+        <li><button onclick='submitForm()' class='btn btn-success navbar-btn'>Deploy</button></li>
+        <li><a href="/users/<%= @current_user.id %>">Profile</a></li>
+        <li><a href="/sessions" data-method="delete">Log Out</a></li>
+      </ul>
+    </div>
+  </div> 
+</div>

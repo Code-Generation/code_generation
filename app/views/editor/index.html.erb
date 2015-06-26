@@ -1,0 +1,217 @@
+<style scoped>
+body {
+  background-color: #222222;
+}
+</style>
+<style id="css" type="text/css" scoped>
+</style>
+<div class="container">
+  <div id="alert_messages_block"></div>
+  <form action="/projects" method="post" id="save_project_form">
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <input id="project_name" name="name" type="text" class="form-control" placeholder="Project Name" value="Project Name">
+    <input id="code" name="code" type="hidden" class="hidden"/>
+  </form>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h5>Browser</h5>
+      <div id="browser">
+        <div id="html"></div>
+        <script id="js"></script>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div id="main_editor"></div>
+    </div>
+  </div>
+  <div id="editors" class="row">
+    <div id="editor_one" ondblclick="goToMain(id)" class="col-sm-4"></div>
+    <div id="editor_two" ondblclick="goToMain(id)" class="col-sm-4"></div>
+    <div id="editor_three" ondblclick="goToMain(id)" class="col-sm-4"></div>
+  </div>
+  <!-- begin Challenge 1 -->
+    <div class="modal fade" id="challenge_1" role="dialog"
+      aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"
+              aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Challenge 1</h4>
+          </div>
+          <div class="modal-footer">
+            <button onclick="showAnswer(1)" type="button" class="btn btn-default" 
+              data-dismiss="modal">
+              Answer
+            </button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Keep Coding
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Challenge 1 -->
+
+    <!-- begin Challenge 2 -->
+    <div class="modal fade" id="challenge_2" role="dialog"
+      aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"
+              aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Challenge 2</h4>
+          </div>
+          <div class="modal-footer">
+            <button onclick="showAnswer(2)" type="button" class="btn btn-default" 
+              data-dismiss="modal">
+              Answer
+            </button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Keep Coding
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Challenge 2 -->
+
+
+    <!-- begin Challenge 3 -->
+    <div class="modal fade" id="challenge_3" role="dialog"
+      aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"
+              aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Challenge 3</h4>
+          </div>
+          <div class="modal-footer">
+            <button onclick="showAnswer(3)" type="button" class="btn btn-default"
+              data-dismiss="modal">
+              Answer
+            </button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Keep Coding
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Challenge 3 -->
+
+
+    <!-- begin Challenge 4 -->
+    <div class="modal fade" id="challenge_4" role="dialog"
+      aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"
+              aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Challenge 4</h4>
+          </div>
+          <div class="modal-footer">
+            <button onclick="showAnswer(4)" type="button" class="btn btn-default"
+              data-dismiss="modal">
+              Answer
+            </button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Keep Coding
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Challenge 4 -->
+
+
+    <!-- begin Challenge 5 -->
+    <div class="modal fade" id="challenge_5" role="dialog"
+      aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"
+              aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Challenge 5</h4>
+          </div>
+          <div class="modal-footer">
+            <button onclick="showAnswer(5)" type="button" class="btn btn-default" 
+              data-dismiss="modal">Answer</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Keep Coding
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Challenge 5 -->
+
+
+    <!-- begin Challenge 6 -->
+    <div class="modal fade" id="challenge_6" role="dialog"
+      aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"
+              aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Challenge 6</h4>
+          </div>
+          <div class="modal-footer">
+            <button onclick="showAnswer(6)" type="button" class="btn btn-default" 
+              data-dismiss="modal">
+              Answer
+            </button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Keep Coding
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Challenge 6 -->
+
+
+    <!-- begin Challenge 7 -->
+    <div class="modal fade" id="challenge_7" role="dialog"
+      aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"
+              aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Challenge 7</h4>
+          </div>
+          <div class="modal-footer">
+            <button onclick="showAnswer(7)" type="button" class="btn btn-default" 
+              data-dismiss="modal">
+              Answer
+            </button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Keep Coding
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Challenge 7 -->
+</div>

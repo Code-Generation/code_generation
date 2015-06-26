@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codegeneration | Editor</title>
+    <link href="https://bootswatch.com/flatly/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'global_scripts', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+   <% if !@current_user %>
+     <%= render 'shared/nav_logged_out' %>
+   <% elsif @current_user and @editor == 'test'%>
+     <%= render 'shared/nav_editor' %>
+   <% else %>
+     <%= render 'shared/nav_logged_in' %>
+   <% end %>
+   <div class="container">
+      <%= yield %>
+    </div>
+    <%= javascript_include_tag 'editor', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'answers', 'data-turbolinks-track' => true %>
+  </body>
+</html>
