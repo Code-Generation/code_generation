@@ -10,10 +10,10 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-   <% if !@current_user %>
-     <%= render 'shared/nav_logged_out' %>
-   <% elsif @current_user and @editor == 'test'%>
+   <% if @course == true %>
      <%= render 'shared/nav_editor' %>
+   <% elsif !@current_user %>
+     <%= render 'shared/nav_logged_out' %>
    <% else %>
      <%= render 'shared/nav_logged_in' %>
    <% end %>

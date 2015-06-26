@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'welcome/index'=> 'welcome#index'
 
+  get 'editor' => 'editor#index'
   get 'editor/:id' => 'editor#show'
   get 'modules' => 'users#show'
   get 'users/new' => 'users#new'
@@ -12,10 +13,11 @@ Rails.application.routes.draw do
   post 'sessions' => 'sessions#create'
   delete 'sessions' => 'sessions#destroy'
   
-  get 'smiley' => 'projects#new', defaults: { course: 'Smiley' }
-  get 'pacman' => 'projects#new', defaults: { course: 'Pacman' }
-  get 'custom' => 'projects#new', defaults: { course: 'custom' }
-  get 'projects/new' => 'projects#new'
+  # get 'smiley' => 'projects#new', defaults: { course: 'Smiley' }
+  # get 'pacman' => 'projects#new', defaults: { course: 'Pacman' }
+  # get 'custom' => 'projects#new', defaults: { course: 'custom' }
+  get 'projects/:id/new' => 'projects#new'
+  # get 'projects/new' => 'projects#new'
   post 'projects' => 'projects#create'
   # get 'projects/:id' => 'projects#show'
   get 'p/:id' => 'projects#show'

@@ -1,6 +1,8 @@
 class ProjectsController < ApplicationController
   def new
-    
+    @course = true
+    current_user
+    render layout: 'editor'
   end
 
   def create
