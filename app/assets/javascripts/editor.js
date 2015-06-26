@@ -1,3 +1,7 @@
+$(document).ready(function() {
+    ace.config.set("workerPath", "/public_js/ace/workers")
+});
+
 window.addEventListener("keydown", function(e) {
     // arrow keys
     if([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
