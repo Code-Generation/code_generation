@@ -20,7 +20,9 @@ class UsersController < ApplicationController
 
   def show
     # @user = User.find(params[:id])
-    current_user
-    @projects = @current_user.projects
+    if signed_in?
+      current_user
+      @projects = @current_user.projects if @current_user.projects
+    end
   end
 end

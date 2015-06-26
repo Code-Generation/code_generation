@@ -1,21 +1,81 @@
-<div class="row">
-  <div class="col-md-3">
-    <h1><%= @current_user.username %></h1>
-    <a class="btn btn-info" href="/editor/index">New Project</a>
+<style scope>  
+  .title{
+    margin-bottom: 20px;
+  }
+
+  .module{
+    text-align: center;
+  }
+
+  img {
+    height: 150px;
+  }
+</style>
+<!-- if logged in -->
+<% if @current_user %>
+  <div class="row">
+    <div class="col-md-3">
+      <h1><%= @current_user.username %></h1>
+      <!-- <a class="btn btn-info" href="/editor/index">New Project</a> -->
+    </div>
+    <div class="col-md-9">
+      <h2>Projects</h2>
+        <% if @projects.length > 0 %>
+          <% @projects.each do |p| %>
+            <div class="bs-component">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><%= p.name %></h3>
+                </div>
+                <div class="panel-body">
+                  <p><%= p.description %></p>
+                  <a class="btn-sm btn-default" href="/p/<%= p.id %>">Go to Project</a>
+                </div>
+              </div>
+          <% end %>
+        <% else %>
+          <h4>No projects yet!</h4>
+        <% end %>
+    </div>
   </div>
-  <div class="col-md-9">
-    <h2>Projects</h2>
-    <% @projects.each do |p| %>
-      <div class="bs-component">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title"><%= p.name %></h3>
-          </div>
-          <div class="panel-body">
-            <p><%= p.description %></p>
-            <a class="btn-sm btn-default" href="/p/<%= p.id %>">Go to Project</a>
-          </div>
-        </div>
-    <% end %>
+  <div class='row title'>
+    <div class='col-md-9 col-md-offset-3'>
+      <h2>Modules</h2>
+    </div>
   </div>
-</div>
+  <div class='row'>
+    <div class='col-md-3 col-md-offset-3 module'>
+      <img src="http://images.all-free-download.com/images/graphiclarge/smiley_grin_100047.jpg" alt=""/> 
+      <h3>Smiley</h3>
+    </div>
+    <div class='col-md-3 module'>
+      <img src="http://4.bp.blogspot.com/-ZUmipm1BxG4/TmMBPQE53nI/AAAAAAAAARk/KfxCASwqXeA/s1600/Pacman.png" alt=""/> 
+      <h3>Pacman</h3>
+    </div>
+     <div class='col-md-3 module'>
+      <img src="http://thefoxisblack.com/blogimages//ryu-gif.gif" alt=""/> 
+      <h3>Street Fighter</h3>
+    </div>
+  </div>
+<!-- if not logged in -->
+<% else %>
+  <div class='row title'>
+    <div class='col-md-11 col-md-offset-1'>
+      <h2>Modules</h2>
+    </div>
+  </div>
+  <div class='row'>
+   <div class='col-md-4 module'>
+     <img src="http://images.all-free-download.com/images/graphiclarge/smiley_grin_100047.jpg" alt=""/> 
+     <h3>Smiley</h3>
+   </div> 
+   <div class='col-md-4 module'>
+     <img src="http://4.bp.blogspot.com/-ZUmipm1BxG4/TmMBPQE53nI/AAAAAAAAARk/KfxCASwqXeA/s1600/Pacman.png" alt=""/> 
+     <h3>Pacman</h3>
+   </div> 
+   <div class='col-md-4 module'>
+     <img src="http://thefoxisblack.com/blogimages//ryu-gif.gif" alt=""/> 
+     <h3>Street Fighter</h3>
+   </div> 
+  </div>
+<% end %>
