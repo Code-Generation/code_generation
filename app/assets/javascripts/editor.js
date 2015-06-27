@@ -203,7 +203,7 @@ $(document).ready(function() {
     html_str += js_editor.getSession().getValue();
     html_str += "<\/script>";
     $('#code').val(html_str)
-    // return html_str;
+    return html_str;
   }
 
   function clearEditor() {
