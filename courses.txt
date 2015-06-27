@@ -24,4 +24,19 @@ INSERT INTO courses (name, challenges, created_at, updated_at) VALUES
 INSERT INTO courses (name, challenges, created_at, updated_at) VALUES
 ('Pacman', , NOW(), NOW());
 
+'<iframe src="https://player.vimeo.com/video/131952574" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>,
+<iframe src="https://player.vimeo.com/video/131952572" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>,
+<iframe src="https://player.vimeo.com/video/131952571" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>,
+<iframe src="https://player.vimeo.com/video/131952570" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>,
+<iframe src="https://player.vimeo.com/video/131952566" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>,
+<iframe src="https://player.vimeo.com/video/131952587" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>,
+<iframe src="https://player.vimeo.com/video/131952580" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
+
+
+
+
+
+
+
+
   

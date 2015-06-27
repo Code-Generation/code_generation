@@ -17,7 +17,7 @@ body {
       $.post($(this).attr('action'),
         $(this).serialize(), 
         function(response){
-          console.log('response');
+          console.log(response);
           $('#modal_message').html('Project is deployed at <a href="'+response.project_url+'" target="_blank>'+response.project_url+'</a>');
         },"json");
       return false;
