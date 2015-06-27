@@ -3,9 +3,11 @@ class ProjectsController < ApplicationController
     # puts params[:id]
     if params[:id]
       course = Course.find(params[:id])
-      @course_id = course.id
-      @course = course.name
-      @challenges = course.challenges.split(',')
+      if course.challenges != nil
+        @course_id = course.id
+        @course = course.name
+        @challenges = course.challenges.split(',')
+      end
       current_user
     end
     render layout: 'editor'
