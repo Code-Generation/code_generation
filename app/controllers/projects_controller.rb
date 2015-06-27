@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
     project.name = params[:name]
 
     if project.save
-
+      session[:deployed] = "New project deployed!";
       render json: {:status => true, :project_url => "http://#{request.host_with_port}/p/#{project.id}", :project_id => project.id}
       # redirect_to "/projects/#{project.id}"
     else

@@ -3,10 +3,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new
-    user.username = params[:username]
-    user.password = params[:password]
-    user.password_confirmation = params[:password_confirmation]
+    # puts user_params
+    user = User.new(user_params)
 
     if user.save 
       session[:user_id] = user.id
@@ -19,10 +17,21 @@ class UsersController < ApplicationController
   end
 
   def show
-    # @user = User.find(params[:id])
-    if signed_in?
-      current_user
-      @projects = @current_user.projects if @current_user.projects
+    if !current_user
+
+    elsif User.exists? id: params[:id]
+      user = User.find(params[:id])
+      if signed_in? and current_user.id == user.id
+        @projects = @current_user.projects if @current_user.projects
+      else
+        deny_access
+      end
+    else
+      deny_access
     end
   end
+
+  def user_params
+      params.require(:user).permit(:username, :password, :password_confirmation)
+    end
 end

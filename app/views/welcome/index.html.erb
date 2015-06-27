@@ -1,16 +1,3 @@
-<!-- <style scoped>
-</style>
-<style id="css" type="text/css" scoped> 
-</style>
-<div class='row'>
-  <div class='col-md-12'>
-    <div class="jumbotron">
-      <h1>Code Generation</h1>
-      <p>Teaching you(th) to code</p>
-      <p><a class="btn btn-primary btn-lg" href="/users/new" role="button">Start Coding</a></p>
-    </div>
-  </div> 
-</div> -->
 <style scoped>
 body {
   background-color: #222222;
@@ -128,7 +115,7 @@ if(localStorage.getItem('editor_three')) {
   }
 } else {
 
-  editor_three.innerHTML = '<h5>JavaScript<\/h5><div id="js_editor"><\/div><button class="pull-right btn-sm btn-success" onclick="runScriptButtonPressed()">Evaluate<\/button>';
+  editor_three.innerHTML = '<h5>JavaScript<\/h5><div id="js_editor"><\/div><button class="pull-right btn-sm btn-primary" onclick="runScriptButtonPressed()">Evaluate<\/button>';
   localStorage.setItem('editor_three', 'js');
 
 }
@@ -173,7 +160,7 @@ html_editor.getSession().setMode("ace/mode/html");
 if(localStorage.getItem("html")){
   html_editor.getSession().setValue(localStorage.getItem("html"));
 } else {
-default_html = "<h1>Welcome to Code Generation</h1>\n<p>Teaching You(th) to Code</p>\n<a class='btn btn-primary' href='/modules'>Start Coding</a>"
+  var default_html = "<h1>Welcome to Code Generation</h1>\n<p>Teaching You(th) to Code</p>\n<a class='btn btn-primary' href='/modules'>Start Coding</a>"
   html_editor.getSession().setValue(default_html);
 }
 
@@ -186,7 +173,12 @@ html.innerHTML = html_value;
 var css_editor  = ace.edit("css_editor");
 css_editor.setTheme("ace/theme/github");
 css_editor.getSession().setMode("ace/mode/css");
-css_editor.getSession().setValue(localStorage.getItem("css"));
+if(localStorage.getItem("css")){
+  css_editor.getSession().setValue(localStorage.getItem("css"));
+} else {
+  var default_css = "h1 {\n\tcolor: #18bc9c;\n}";
+  css_editor.getSession().setValue(default_css);
+}
 css_editor.getSession().setUseWrapMode(true);
 
 var css = document.getElementById('css');

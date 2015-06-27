@@ -17,7 +17,8 @@ body {
       $.post($(this).attr('action'),
         $(this).serialize(), 
         function(response){
-          $('#modal_message').html('Project is deployed at <a href="'+response.project_url+'" target="_blank">'+response.project_url+'</a>');
+          console.log('response');
+          $('#modal_message').html('Project is deployed at <a href="'+response.project_url+'" target="_blank>'+response.project_url+'</a>');
         },"json");
       return false;
     })
@@ -59,10 +60,6 @@ body {
             <%= raw challenge %>
           </div>
           <div class="modal-footer">
-            <button onclick="showAnswer(1)" type="button" class="btn btn-default" 
-              data-dismiss="modal">
-              Answer
-            </button>
             <button type="button" class="btn btn-primary" data-dismiss="modal">
               Keep Coding
             </button>
@@ -95,6 +92,4 @@ body {
       </div><!-- /.modal-content -->
     </form><!-- /.modal-dialog -->
   </div><!-- /.modal -->
-
-
 </div>

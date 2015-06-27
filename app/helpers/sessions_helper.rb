@@ -6,4 +6,9 @@ module SessionsHelper
   def signed_in?
     !current_user.nil?
   end
+
+  def deny_access
+    reset_session
+    redirect_to '/';
+  end
 end
