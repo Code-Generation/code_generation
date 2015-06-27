@@ -1,11 +1,13 @@
 class ProjectsController < ApplicationController
   def new
     # puts params[:id]
-    course = Course.find(params[:id])
-    @course_id = course.id
-    @course = course.name
-    @challenges = course.challenges.split(',')
-    current_user
+    if params[:id]
+      course = Course.find(params[:id])
+      @course_id = course.id
+      @course = course.name
+      @challenges = course.challenges.split(',')
+      current_user
+    end
     render layout: 'editor'
   end
 

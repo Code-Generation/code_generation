@@ -45,29 +45,30 @@ body {
     <div id="editor_two" ondblclick="goToMain(id)" class="col-sm-4"></div>
     <div id="editor_three" ondblclick="goToMain(id)" class="col-sm-4"></div>
   </div>
-  <% @challenges.each_with_index do |challenge,i| %>
-    <div class="modal fade" id="challenge_<%= i + 1 %>" role="dialog"
-      aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"
-              aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h4 class="modal-title">Challenge <%= i + 1 %></h4>
-            <%= raw challenge %>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">
-              Keep Coding
-            </button>
+  <% if @challenges %>
+    <% @challenges.each_with_index do |challenge,i| %>
+      <div class="modal fade" id="challenge_<%= i + 1 %>" role="dialog"
+        aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"
+                aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">Challenge <%= i + 1 %></h4>
+              <%= raw challenge %>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">
+                Keep Coding
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
-
   <div class="modal fade" id="projectInfoModal" >
     <form action='/projects' id='deploy_form' method='post' class="modal-dialog">
       <div class="modal-content">
