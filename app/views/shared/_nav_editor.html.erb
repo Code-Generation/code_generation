@@ -14,34 +14,36 @@
     </div>
     <div class='navbar-collapse collapse' id='navbar-main'>
       <ul class='nav navbar-nav navbar-right' id="challenges_list">
-        <li class="challenge_item">
-          <a href="#"
-            data-toggle="modal" data-target="#challenge_1">Challenge 1</a>
-        </li>
-        <li class="challenge_item">
-          <a href="#"
-            data-toggle="modal" data-target="#challenge_2">Challenge 2</a>
-        </li>
-        <li class="challenge_item">
-          <a href="#"
-            data-toggle="modal" data-target="#challenge_3">Challenge 3</a>
-        </li>
-        <li class="challenge_item">
-          <a href="#"
-            data-toggle="modal" data-target="#challenge_4">Challenge 4</a>
-        </li>
-        <li class="challenge_item">
-          <a href="#"
-            data-toggle="modal" data-target="#challenge_5">Challenge 5</a>
-        </li>
-        <li class="challenge_item">
-          <a href="#"
-            data-toggle="modal" data-target="#challenge_6">Challenge 6</a>
-        </li>
-        <li class="challenge_item">
-          <a href="#"
-            data-toggle="modal" data-target="#challenge_7">Challenge 7</a>
-        </li>
+        <% if @challenges %>
+          <li class="challenge_item">
+            <a href="#"
+              data-toggle="modal" data-target="#challenge_1">Challenge 1</a>
+          </li>
+          <li class="challenge_item">
+            <a href="#"
+              data-toggle="modal" data-target="#challenge_2">Challenge 2</a>
+          </li>
+          <li class="challenge_item">
+            <a href="#"
+              data-toggle="modal" data-target="#challenge_3">Challenge 3</a>
+          </li>
+          <li class="challenge_item">
+            <a href="#"
+              data-toggle="modal" data-target="#challenge_4">Challenge 4</a>
+          </li>
+          <li class="challenge_item">
+            <a href="#"
+              data-toggle="modal" data-target="#challenge_5">Challenge 5</a>
+          </li>
+          <li class="challenge_item">
+            <a href="#"
+              data-toggle="modal" data-target="#challenge_6">Challenge 6</a>
+          </li>
+          <li class="challenge_item">
+            <a href="#"
+              data-toggle="modal" data-target="#challenge_7">Challenge 7</a>
+          </li>
+        <% end %>
         <% if @current_user %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu<span class="caret"></span></a>
@@ -53,7 +55,7 @@
           <li><button id='deploy' data-toggle="modal" data-target="#projectInfoModal" class='btn btn-success navbar-btn'>Deploy</button></li>
         <% else %>
           <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu<span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="/users/new">Register</a></li>
               <li><a href="/sessions/new">Login</a></li>
