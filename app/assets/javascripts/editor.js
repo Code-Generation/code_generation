@@ -162,6 +162,7 @@ $(document).ready(function() {
     var html_value = html_editor.getSession().getValue();
     html.innerHTML = html_value;
     projectsInfo.html = html_value
+    updateLocalStorage()
   })
 
   css_editor.on('change', function() {
@@ -169,12 +170,14 @@ $(document).ready(function() {
     var css_value = css_editor.getSession().getValue();
     css.innerHTML = css_value;
     projectsInfo.css = css_value
+    updateLocalStorage()
   })
 
   js_editor.on('change', function() {
     var js_value = js_editor.getSession().getValue();
     console.dir(projectsInfo.js);
     projectsInfo.js = js_value
+    updateLocalStorage()
   })
 
   function runScriptButtonPressed() {
@@ -220,7 +223,10 @@ $(document).ready(function() {
   function submitForm(){
     $('#save_project_form').trigger('submit');
   }
-
+  function updateLocalStorage() {
+    localStorage.setItem("projectsInfo", JSON.stringify(projectsInfo))
+  }
+  
   var alert_messages_block = document.getElementById('alert_messages_block');
   alert_messages_block.innerHTML = "";
 $(document).ready(function() {
