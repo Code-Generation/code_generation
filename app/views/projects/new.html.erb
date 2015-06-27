@@ -18,7 +18,8 @@ body {
         $(this).serialize(), 
         function(response){
           console.log(response);
-          $('#modal_message').html('Project is deployed at <a href="'+response.project_url+'" target="_blank>'+response.project_url+'</a>');
+          var message = 'Project is deployed at <a href="'+response.project_url+'" target="_blank>'+response.project_url+'</a>'
+          $('#modal_message').html(message);
         },"json");
       return false;
     })
